@@ -1,12 +1,12 @@
-Name: faketime
-Version: 0.8.1
-Release: 0
-Summary: Run programs with a faked system time
-License: GPLv2
-Group: Development/Other
-URL: http://www.code-wizards.com/projects/libfaketime/
+Name:		faketime
+Version:	0.9.1
+Release:	1
+Summary:	Run programs with a faked system time
+License:	GPLv2
+Group:		Development/Other
+URL:		http://www.code-wizards.com/projects/libfaketime/
 
-Source: libfaketime-%version.tar.gz
+Source0:	http://www.code-wizards.com/projects/libfaketime/libfaketime-%{version}.tar.gz
 
 %description
 The Fake Time Preload Library (FTPL or libfaketime) intercepts various system
