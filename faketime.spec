@@ -4,13 +4,14 @@
 
 Summary:	Report faked system time to programs
 Name:		faketime
-Version:	0.9.5
-Release:	3
+Version:	0.9.6
+Release:	1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.code-wizards.com/projects/libfaketime/
 Source0:	http://www.code-wizards.com/projects/libfaketime/libfaketime-%{version}.tar.gz
-Patch0:		avoid-spurious-lrt.patch
+Patch1:		faketime-0.9.6-comparison-nonnull-parameter-a-true.patch
+Patch2:		libfaketime-0.9.5-fix-infinite-recursion-on-real_clock_gettime.patch
 Requires:	%{libname} = %{EVRD}
 Requires:	%{libnamemt} = %{EVRD}
 
@@ -56,7 +57,11 @@ Faketime shared library.
 
 %prep
 %setup -q -n libfaketime-%{version}
-%patch0 -p1
+%apply_patches
+
+# work around from upstream for autodetecting glibc version bug on i686
+sed -i -e 's/__asm__(".symver timer_gettime_22/\/\/__asm__(".symver timer_gettime_22/' src/libfaketime.c
+sed -i -e 's/__asm__(".symver timer_settime_22/\/\/__asm__(".symver timer_settime_22/' src/libfaketime.c
 
 %build
 %setup_compile_flags

@@ -1,0 +1,76 @@
+diff --git a/src/libfaketime.c b/src/libfaketime.c
+index ecda143..c1eab41 100644
+--- a/src/libfaketime.c
++++ b/src/libfaketime.c
+@@ -510,7 +510,7 @@ int __xstat (int ver, const char *path, struct stat *buf)
+     return -1;
+   }
+ 
+-   if (buf != NULL)
++   if (buf)
+    {
+      if (!fake_stat_disabled)
+      {
+@@ -539,7 +539,7 @@ int __fxstat (int ver, int fildes, struct stat *buf)
+     return -1;
+   }
+ 
+-  if (buf != NULL)
++  if (buf)
+   {
+     if (!fake_stat_disabled)
+     {
+@@ -568,7 +568,7 @@ int __fxstatat(int ver, int fildes, const char *filename, struct stat *buf, int
+     return -1;
+   }
+ 
+-  if (buf != NULL)
++  if (buf)
+   {
+     if (!fake_stat_disabled)
+     {
+@@ -597,7 +597,7 @@ int __lxstat (int ver, const char *path, struct stat *buf)
+     return -1;
+   }
+ 
+-  if (buf != NULL)
++  if (buf)
+   {
+     if (!fake_stat_disabled)
+     {
+@@ -625,7 +625,7 @@ int __xstat64 (int ver, const char *path, struct stat64 *buf)
+     return -1;
+   }
+ 
+-  if (buf != NULL)
++  if (buf)
+   {
+     if (!fake_stat_disabled)
+     {
+@@ -653,7 +653,7 @@ int __fxstat64 (int ver, int fildes, struct stat64 *buf)
+     return -1;
+   }
+ 
+-  if (buf != NULL)
++  if (buf)
+   {
+     if (!fake_stat_disabled)
+     {
+@@ -682,7 +682,7 @@ int __fxstatat64 (int ver, int fildes, const char *filename, struct stat64 *buf,
+     return -1;
+   }
+ 
+-  if (buf != NULL)
++  if (buf)
+   {
+     if (!fake_stat_disabled)
+     {
+@@ -711,7 +711,7 @@ int __lxstat64 (int ver, const char *path, struct stat64 *buf)
+     return -1;
+   }
+ 
+-  if (buf != NULL)
++  if (buf)
+   {
+     if (!fake_stat_disabled)
+     {
