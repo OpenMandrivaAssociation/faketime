@@ -64,6 +64,7 @@ sed -i -e 's/__asm__(".symver timer_gettime_22/\/\/__asm__(".symver timer_gettim
 sed -i -e 's/__asm__(".symver timer_settime_22/\/\/__asm__(".symver timer_settime_22/' src/libfaketime.c
 
 %build
+%global optflags %{optflags} -Wno-error
 %setup_compile_flags
 %make PREFIX=%{_prefix} LIBDIRNAME=/%{_lib}
 
