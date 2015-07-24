@@ -63,6 +63,9 @@ Faketime shared library.
 sed -i -e 's/__asm__(".symver timer_gettime_22/\/\/__asm__(".symver timer_gettime_22/' src/libfaketime.c
 sed -i -e 's/__asm__(".symver timer_settime_22/\/\/__asm__(".symver timer_settime_22/' src/libfaketime.c
 
+#https://github.com/wolfcw/libfaketime/issues/75
+sed -i -e 's!-Werror!!'g src/Makefile
+
 %build
 %global optflags %{optflags} -Wno-error -Wno-pointer-bool-conversion
 %setup_compile_flags
