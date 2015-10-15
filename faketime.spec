@@ -67,6 +67,7 @@ sed -i -e 's/__asm__(".symver timer_settime_22/\/\/__asm__(".symver timer_settim
 sed -i -e 's!-Werror!!'g src/Makefile
 
 %build
+export CC=gcc
 %global optflags %{optflags} -Wno-error -Wno-pointer-bool-conversion
 %setup_compile_flags
 %make PREFIX=%{_prefix} LIBDIRNAME=/%{_lib}
