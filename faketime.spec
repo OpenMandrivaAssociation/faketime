@@ -5,7 +5,7 @@
 Summary:	Report faked system time to programs
 Name:		faketime
 Version:	0.9.6
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.code-wizards.com/projects/libfaketime/
