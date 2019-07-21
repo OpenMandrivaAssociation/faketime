@@ -4,14 +4,13 @@
 
 Summary:	Report faked system time to programs
 Name:		faketime
-Version:	0.9.6
-Release:	5
+Version:	0.9.7
+Release:	1
 License:	GPLv2+
 Group:		Development/Other
 Url:		http://www.code-wizards.com/projects/libfaketime/
-Source0:	http://www.code-wizards.com/projects/libfaketime/libfaketime-%{version}.tar.gz
+Source0:	https://github.com/wolfcw/libfaketime/archive/v%{version}.tar.gz
 Patch1:		faketime-0.9.6-comparison-nonnull-parameter-a-true.patch
-Patch2:		libfaketime-0.9.5-fix-infinite-recursion-on-real_clock_gettime.patch
 Requires:	%{libname} = %{EVRD}
 Requires:	%{libnamemt} = %{EVRD}
 
