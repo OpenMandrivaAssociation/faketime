@@ -4,7 +4,7 @@
 
 Summary:	Report faked system time to programs
 Name:		faketime
-Version:	0.9.7
+Version:	0.9.8
 Release:	1
 License:	GPLv2+
 Group:		Development/Other
