@@ -56,7 +56,7 @@ Faketime shared library.
 
 %prep
 %setup -q -n libfaketime-%{version}
-%apply_patches
+%autopatch -p1
 
 # work around from upstream for autodetecting glibc version bug on i686
 sed -i -e 's/__asm__(".symver timer_gettime_22/\/\/__asm__(".symver timer_gettime_22/' src/libfaketime.c
