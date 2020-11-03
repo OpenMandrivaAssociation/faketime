@@ -1,3 +1,4 @@
+%define _disable_lto 1
 %define major 1
 %define libname %mklibname %{name} %{major}
 %define libnamemt %mklibname %{name}MT %{major}
@@ -69,9 +70,9 @@ sed -i -e 's!-Werror!!'g src/Makefile
 export CC=gcc
 %global optflags %{optflags} -Wno-error -Wno-pointer-bool-conversion
 %setup_compile_flags
-%make PREFIX=%{_prefix} LIBDIRNAME=/%{_lib}
+%make_build PREFIX=%{_prefix} LIBDIRNAME=/%{_lib}
 
 %install
-%makeinstall_std PREFIX=%{_prefix} LIBDIRNAME=/%{_lib}
+%make_install PREFIX=%{_prefix} LIBDIRNAME=/%{_lib}
 
 chmod 0755 %{buildroot}%{_libdir}/lib%{name}*.so.%{major}*
