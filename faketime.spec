@@ -9,7 +9,7 @@ Version:	0.9.9
 Release:	2
 License:	GPLv2+
 Group:		Development/Other
-Url:		http://www.code-wizards.com/projects/libfaketime/
+Url:		https://www.code-wizards.com/projects/libfaketime/
 Source0:	https://github.com/wolfcw/libfaketime/archive/v%{version}.tar.gz
 Patch1:		faketime-0.9.6-comparison-nonnull-parameter-a-true.patch
 Requires:	%{libname} = %{EVRD}
