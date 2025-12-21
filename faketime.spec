@@ -15,6 +15,7 @@ Patch1:		faketime-0.9.6-comparison-nonnull-parameter-a-true.patch
 Requires:	%{libname} = %{EVRD}
 Requires:	%{libnamemt} = %{EVRD}
 
+BuildRequires:	make
 %description
 libfaketime intercepts various system calls which programs use to
 retrieve the current date and time. It can then report faked dates and
