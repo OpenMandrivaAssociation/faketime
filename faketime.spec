@@ -5,13 +5,13 @@
 
 Summary:	Report faked system time to programs
 Name:		faketime
-Version:	0.9.9
-Release:	2
+Version:	0.9.12
+Release:	1
 License:	GPLv2+
 Group:		Development/Other
 Url:		https://www.code-wizards.com/projects/libfaketime/
 Source0:	https://github.com/wolfcw/libfaketime/archive/v%{version}.tar.gz
-Patch1:		faketime-0.9.6-comparison-nonnull-parameter-a-true.patch
+# dropped (no longer applies): Patch1:		faketime-0.9.6-comparison-nonnull-parameter-a-true.patch
 Requires:	%{libname} = %{EVRD}
 Requires:	%{libnamemt} = %{EVRD}
 
@@ -57,7 +57,7 @@ Faketime shared library.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q -n libfaketime-%{version}
+%setup -q -n libfaketime-0.9.12
 %autopatch -p1
 
 # work around from upstream for autodetecting glibc version bug on i686
